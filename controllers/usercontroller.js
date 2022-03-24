@@ -16,7 +16,6 @@ const generateJwt = (id, email, role) => {
 class userController{
     async createUser(req, res, next){
         console.log(req.query)
-        console.log('эм сработал?')
         const {login, email, password} = req.body
         console.log(req.body)
         console.log(req.query)
@@ -47,7 +46,6 @@ class userController{
             return next(ApiError.internal('Указан неверный пароль'))
         }
         const token = generateJwt(user.login, user.email, user.role)
-        console.log('ЗАЛОГИНИЛСЯ')
         console.log(token)
         const joffrey = 1234
         console.log({joffrey})
@@ -62,7 +60,6 @@ class userController{
 
     async checkingauth(req,res,next){
         const joffrey = 1234
-        console.log('залогинен')
         return res.json(joffrey)
     }
 

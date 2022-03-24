@@ -22,8 +22,6 @@ class BookControllers{
     }
     async getAll(req,res){
         let books
-        console.log('сработало')
-        console.log('а че тут работает?')
         let {brandId,typeId, limit, page } = req.query
         page = page || 1
         limit = limit || 9
