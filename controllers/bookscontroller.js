@@ -22,7 +22,7 @@ class BookControllers{
     }
     async getAll(req,res){
         let books
-        let {brandId,typeId, limit, page } = req.query
+        let {genre, limit, page } = req.query
         page = page || 1
         limit = limit || 9
         let offset = page
