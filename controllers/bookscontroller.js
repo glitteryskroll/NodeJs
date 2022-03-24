@@ -26,7 +26,7 @@ class BookControllers{
         page = page || 1
         limit = limit || 9
         let offset = page
-        if (!brandId && !typeId){
+        if (!genre){
             books = await Book.findAndCountAll()
         }
         return res.json(books)
